@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #4dee4d;
+    --secondary-color: #edf2f8;
+    --white-primary: #fff;
+    --black-primary: #000;
+    --main-Bg-color: papayawhip;
+    --h2-size: 40px;
+    --h3-size: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    /* background-color: var(--black-primary); */
+    background-image: url('images/section-background.jpg');
+    background-position: center;
+    background-size: cover;
+    color: var(--white-primary);
+    padding-bottom: 36rem;
+    position: relative;
+    padding-left: 3rem;
+}
+header h1 {
+    font-size: 20px;
+}
+header ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.25rem 0.5rem;
+    flex-flow: row nowrap;
+}
+header li {
+    list-style-type: none;
+    padding: 0 1rem;
+}
+header a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+header a:hover{
+    color: var(--primary-color);
+        transform:scale(150%);
+        transition: ease-in-out 0.4s ;
+}
+header ul:hover {
+    transform: rotateX('360deg');
+}
+section {
+    position: absolute;
+    top: 15rem;
+    left: 3rem;
+    color: var(--white-primary);
+}
+section h3 {
+    font-size: 15px;
+    opacity: 60%;
+    color: lightgreen;
+}
+section h2 {
+    font-size: 4rem;
+}
+section p {
+    font-size: 18px;
+}
+.header-button {
+    display: flex;
+    padding-top: 1rem;
+}
+.header-button button {
+    width: 7rem;
+    height: 2rem;
+}
+.header-button a {
+    text-decoration: none;
+    color: var(--white-primary);
+}
+.header-button-1 {
+    padding-right: 10px;
+}
+.header-button-1 button {
+    background-color: var(--primary-color);
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.header-button-2 button {
+    background-color: transparent;
+    border-color: 1px var(--white-primary);
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.green {
+    /* background-color: var(--primary-color); */
+    background-color: var(--primary-color);
+    color: var(--white-primary);
+    padding: 1rem 0;
+}
+.green ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+            /*Did'nt work*/
+/* .green li {
+    background-image: url('images/leaf.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 18px;
+} */
+/* .green li::before {
+    content: url('images/leaf.svg');
+    padding-left: 1.2rem;
+    border: #6f3700 1px solid;
+} */
+
+.green img {
+    animation-name: leaf;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in-out;
+    animation-delay: none;
+}
+
+@keyframes leaf {
+    0% {
+        transform: translate(0);
+    }
+    33% {
+        transform: rotateX(180deg) translateX(-7rem);
+    }
+    70% {
+        transform: rotateX(180deg) translateX(0.1rem);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+    .firstChild {
+        background-color: var(--main-Bg-color);
+        background-image: url('images/leaf.svg');
+        background-repeat: no-repeat;
+        background-size: 5rem;
+        background-position: right 6rem top 1rem, right 35rem  bottom 3rem;
+        color: var(--black-primary);
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+    }
+    .firstChild h2 {
+        font-size: var(--h2-size);
+    }
+    .firstChild [src] {
+        max-width: 380PX;
+        height: 350px;
+    }
+    .first-P {
+        padding: 40px;
+    }
+    .first-P h3 {
+        font-size: var(--h3-size);
+        padding: 5px 0;
+    }
+    .first-P p {
+        font-size : 16px;
+        line-height: 20px;
+    }
+    :is(.first-P button, .first-P a) {
+        text-decoration: none;
+        min-width: 8rem;
+        height: 2rem;
+        background-color: var(--primary-color);
+        color: var(--white-primary);
+        border-radius: 5px;
+        border: none;
+        margin-top: 1rem;
+        position: relative;
+    }
+    .button img {
+        position: absolute;
+        top: 53.5rem;
+        left: 40rem;
+    }
+    .button img {
+        animation-name: spin;
+        animation-timing-function: ease-in;
+        animation-duration: 3s;
+        animation-fill-mode: backwards;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+    }
+    @keyframes spin {
+        0% {
+            transform: translate(0) rotate(0deg);
+        }
+        70% {
+            transform: translate(0) rotate(180deg);
+        }
+        100% {
+            transform: translate(0) rotate(0deg);
+        }
+    }
+    .second-child {
+        padding: 10px;
+    }
+    .second-child h2 {
+        font-size: var(--h2-size);
+    }
+    .second-child> h3 {
+        font-size: var(--h3-size);
+        color: var(--primary-color);
+    }
+    .second-child {
+        padding: 0.5rem 5rem;
+        margin-bottom: 4rem;
+    }
+    .second-p{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    .second-p :is(.dR, .sE, .cO) {
+        background-color: var(--main-Bg-color);
+        padding: 15px;
+    }
+    .image {
+        background-color: var(--primary-color);
+        background-position: bottom;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        padding: 0.5rem;
+    }
+    .second-p :is(.dR, .sE, .cO) h3 {
+        padding: 10px  0px;
+    }
+    .second-p [loading=lazy] {
+        width: 20rem;
+        height: 15rem;
+        padding-top: 2rem;
+    }
+
+    footer {
+        padding: 1rem;
+        background-color: var(--main-Bg-color);
+        border-bottom: var(--primary-color) 3rem solid;
+    }
+    footer h2 {
+        font-size: var(--h2-size);
+    }
+    footer> h3 {
+        font-size: var(--h3-size);
+        color: var(--primary-color);
+    }
+    footer p {
+        line-height: 1.3rem;
+        padding-bottom: 5px;
+    }
+    footer button {
+
+        width: 12rem;
+        height: 3rem;
+        background-color: var(--white-primary);
+        border: none;
+        margin: 4px;
+    }
+    footer button a {
+        text-decoration: none;
+        color: var(--black-primary);
+        font-size: 1rem;
+    }
+    footer button a:hover {
+       color: var(--white-primary);
+       background-color: var(--black-primary);
+
+    }
+    footer {
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem 12rem;
+    }
+    .wateringPlant img {
+        border-radius: 100%;
+        height: 20rem;
+        width: 20rem;
+    }
